@@ -22,7 +22,7 @@
     "crayon-react": "^1.1.2",
     "css-loader": "^2.1.0",
     "csstype": "^2.6.6",
-    "in-a-state": "^1.0.2",
+    "global-context": "^1.0.1",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

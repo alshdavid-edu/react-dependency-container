@@ -1,5 +1,5 @@
 import React from 'react';
-import { useInstanceOf } from '~/gui/state';
+import { useInstanceOf } from 'global-context';
 import { Router } from 'crayon';
 
 export const BackButton = () => {
