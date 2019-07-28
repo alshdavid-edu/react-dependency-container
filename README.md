@@ -10,8 +10,9 @@ Then navigate to
 localhost:8080
 ```
 
-## What file to look at first?
+## Files to care about?
 
+Entrypoint
 ```
 /src/gui/app.ts
 ```
