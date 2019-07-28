@@ -5,14 +5,14 @@ import { GlobalContext } from 'global-context'
 import * as pages from '~/gui/pages'
 import { state } from './state'
 
-const app = crayon.create()
-app.use(react.router())
-app.use(react.withContext(GlobalContext, state))
+const router = crayon.create()
+router.use(react.router())
+router.use(react.withContext(GlobalContext, state))
 
-app.path('/', (req, res) => res.mount(pages.Home))
+router.path('/', (req, res) => res.mount(pages.Home))
 
-state.router = app
-app.load()
+state.router = router
+router.load()
 
 // Demo stuff
 import './demo-stuff'
