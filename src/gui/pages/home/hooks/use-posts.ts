@@ -11,7 +11,7 @@ export interface Post {
 }
 
 export const usePosts = () => {
-  const httpClient = useGlobalSelector((state: State) => state.httpClient)
+  const httpClient = useGlobalSelector((ctx: State) => ctx.httpClient)
   const [ posts, setPosts ] = useState<Post[]>([])
 
   const fetchPosts = async () => {
