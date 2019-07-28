@@ -2,8 +2,7 @@ import './toolbar.scss'
 import React from 'react';
 import { useBehaviorSubject } from 'use-subscribable'
 import { ThemeEngine } from '~/platform/theme';
-import { useInstanceOf, useGlobalSelector } from 'global-context';
-import { State } from '~/gui/state';
+import { useInstanceOf } from 'global-context';
 
 interface ToolbarProps {
   children?: React.ReactNode

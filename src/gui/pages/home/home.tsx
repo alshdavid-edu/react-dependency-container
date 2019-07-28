@@ -1,15 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Toolbar } from '~/gui/components';
-import { useStateSelector } from '~/gui/state';
+import { usePosts } from './hooks';
+import { Post } from './components';
 
 export const Home = () => {
-    const httpClient = useStateSelector(state => state.httpClient)
-    const [ todos, setTodos ] = useState([])
-
-    const fetchPosts = async () => {
-      const results = await httpClient.get('https://jsonplaceholder.typicode.com/todos')
-      setTodos(results.data)
-    }
+    const { posts, fetchPosts } = usePosts()
 
     return <div>
       <Toolbar>
@@ -20,11 +15,11 @@ export const Home = () => {
         Get Posts
       </button>
       { 
-        todos.map((todo: any) => 
-        <div 
-          key={todo.id}>
-          {todo.title}
-        </div>)
+        posts.map(
+          post => <Post  
+            key={post.id} 
+            title={post.title} />
+        )
       }
     </div>
 }
